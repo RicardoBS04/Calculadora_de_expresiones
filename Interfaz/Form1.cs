@@ -92,7 +92,7 @@ namespace Interfaz
 
         private void btnPor_Click(object sender, EventArgs e)
         {
-            txtExpresion.Text += "x";
+            txtExpresion.Text += "*";
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -102,7 +102,7 @@ namespace Interfaz
 
         private void btnPot_Click(object sender, EventArgs e)
         {
-            txtExpresion.Text += "^";
+            txtExpresion.Text += "**";
         }
 
         private void btnMod_Click(object sender, EventArgs e)

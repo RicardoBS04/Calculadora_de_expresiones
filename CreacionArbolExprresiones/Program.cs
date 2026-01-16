@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Win32;
 
-namespace CreacionArbolExprresiones
+/*namespace CreacionArbolExprresiones
 {
 
     //CODIGO PARA PROBAR LOS ARBOLES y REGISTRO QUITAR PARA PEGAR TODO
@@ -45,4 +45,4 @@ namespace CreacionArbolExprresiones
             }
         }
     }
-}
+}*/

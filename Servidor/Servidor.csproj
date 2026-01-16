@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cliente\Cliente.csproj" />
+    <ProjectReference Include="..\CreacionArbolExprresiones\CreacionArbolExprresiones.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

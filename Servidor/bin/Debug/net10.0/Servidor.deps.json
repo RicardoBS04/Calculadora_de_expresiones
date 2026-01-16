@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Servidor/1.0.0": {
+        "dependencies": {
+          "Cliente": "1.0.0",
+          "CreacionArbolExprresiones": "1.0.0"
+        },
+        "runtime": {
+          "Servidor.dll": {}
+        }
+      },
+      "Cliente/1.0.0": {
+        "runtime": {
+          "Cliente.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CreacionArbolExprresiones/1.0.0": {
+        "runtime": {
+          "CreacionArbolExprresiones.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Servidor/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cliente/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CreacionArbolExprresiones/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
