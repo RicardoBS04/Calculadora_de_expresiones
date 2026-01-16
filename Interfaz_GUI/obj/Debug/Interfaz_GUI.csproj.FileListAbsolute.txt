@@ -1,0 +1,10 @@
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\bin\Debug\Interfaz_GUI.exe.config
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\bin\Debug\Interfaz_GUI.exe
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\bin\Debug\Interfaz_GUI.pdb
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.csproj.AssemblyReference.cache
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.Properties.Resources.resources
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.csproj.GenerateResource.cache
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.csproj.CoreCompileInputs.cache
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.exe
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.pdb
+C:\Users\ricar\source\repos\Interfaz_GUI\Interfaz_GUI\obj\Debug\Interfaz_GUI.frmCalc.resources
