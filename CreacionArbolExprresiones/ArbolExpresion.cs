@@ -7,7 +7,7 @@ public class Nodo
 
     public Nodo(string valor)
     {
-        Valor = valor;
+        this.valor = valor;
         hijo_derecho = null;
         hijo_izquierdo = null;
     }
@@ -40,8 +40,8 @@ public class ArbolDeExpresiones
                 if (tokenString == "not")
                 {
                     Nodo nodo_operador_not = new Nodo(tokenString);
-                    Nodo hijoIzquierdo = pila.Pop();
-                    nodo_operador_not.hijo_izquierdo = hijoIzquierdo;
+                    Nodo hijo = pila.Pop();
+                    nodo_operador_not.hijo_izquierdo = hijo;
 
                     pila.Push(nodo_operador_not);
                     continue;
@@ -71,16 +71,76 @@ public class ArbolDeExpresiones
             throw new Exception("Expresion postfija invalida");
         }
     }
-}
-}
 
-
-class Program
-{
-    public static void Main(string[] args)
+    public double EvaluarArbol(Nodo nodo)
     {
-        Convertor convertor = new Convertor();
-        List<string> resultado = convertor.Postfijo("23 + 9 * (9 - 2)");
-        Console.WriteLine(string.Join(" ", resultado));
+        if(nodo.hijo_izquierdo == null && nodo.hijo_derecho == null)
+        {
+            return Convert.ToDouble(nodo.valor);
+        }
+
+        if(nodo.valor == "not")
+        {
+            double hijo = EvaluarArbol(nodo.hijo_izquierdo);
+
+            if (!EsLogico(hijo))
+            {
+                throw new Exception("Solo se aceptan valores de 0 o 1");
+            }
+
+            return hijo == 0 ? 1 : 0;
+        }
+
+        double izquierdo = EvaluarArbol(nodo.hijo_izquierdo);
+        double derecho = EvaluarArbol(nodo.hijo_derecho);
+
+        switch (nodo.valor)
+        {
+            case "+":
+                return izquierdo + derecho;
+            case "-":
+                return izquierdo - derecho;
+            case "/":
+                return izquierdo / derecho;
+            case "*":
+                return izquierdo * derecho;
+            case "**":
+                return Math.Pow(izquierdo, derecho);
+            case "%":
+                return izquierdo % derecho;
+            case "and":
+
+                if(!EsLogico(izquierdo) || !EsLogico(derecho))
+                    {
+                       throw new Exception("Tienen que ser valores de 0 o 1"); 
+                    }
+                return (izquierdo == 1 && derecho == 1) ? 1 : 0;
+
+            case "or":
+
+                if(!EsLogico(izquierdo) || !EsLogico(derecho))
+                    {
+                       throw new Exception("Tienen que ser valores de 0 o 1"); 
+                    }
+                return (izquierdo == 1 || derecho == 1) ? 1 : 0;
+                
+            case "xor":
+
+                if(!EsLogico(izquierdo) || !EsLogico(derecho))
+                    {
+                       throw new Exception("Tienen que ser valores de 0 o 1"); 
+                    }
+                return (izquierdo != derecho) ? 1 : 0;
+
+            default:
+                throw new Exception("Operador desconocido");
+        }
+
     }
+
+    private bool EsLogico(double valor)
+        {
+            return valor == 1 || valor == 0 ;
+        }
+}
 }
