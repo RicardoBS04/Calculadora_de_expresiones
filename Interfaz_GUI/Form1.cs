@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using cliente;
+//using cliente;
 
 namespace Interfaz_GUI
 {
@@ -137,7 +137,8 @@ namespace Interfaz_GUI
         {
             string expresion = txtExpresion.Text;
 
-            enviar_mensaje(expresion);
+            //enviar_mensaje(expresion);
+            Console.WriteLine(expresion);
 
         }
     }
