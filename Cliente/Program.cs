@@ -1,43 +1,36 @@
-﻿using System;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Net.Sockets;
-using System.Runtime.CompilerServices;
+﻿using System.Net.Sockets;
 using System.Text;
 
-
-namespace cliente
+namespace clienteTCP
 {
-    class Program
+    public class ClienteTCP
     {
-        static void Main()
+        private TcpClient cliente;
+        private NetworkStream stream;
+
+        public void Conectar(string ip, int puerto)
         {
-            string ipServidor = "127.0.0.1";
-            int puerto = 5000;
+            cliente = new TcpClient(ip, puerto);
+            stream = cliente.GetStream();
+        }
 
-            TcpClient cliente = new TcpClient();
+        public void Enviar(string mensaje)
+        {
+            byte[] datos = Encoding.UTF8.GetBytes(mensaje);
+            stream.Write(datos, 0, datos.Length);
+        }
 
-            cliente.Connect(ipServidor, puerto);
-            Console.WriteLine("Conectado al servidor");
-
-            NetworkStream stream = cliente.GetStream();
-
+        public string Recibir()
+        {
             byte[] buffer = new byte[1024];
-            int bytesLeidos = stream.Read(buffer, 0, buffer.Length);
-            string respuesta = Encoding.UTF8.GetString(buffer, 0, bytesLeidos);
+            int bytes = stream.Read(buffer, 0, buffer.Length);
+            return Encoding.UTF8.GetString(buffer, 0, bytes);
+        }
 
-            Console.WriteLine("Respuesta del servidor: " + respuesta);
-
+        public void Cerrar()
+        {
             stream.Close();
             cliente.Close();
         }
-
-        public void enviar_mensaje(string dato)
-        {
-            byte[] datos = Encoding.UTF8.GetBytes(dato);
-            stream.Write(datos, 0, datos.Length);
-            Console.WriteLine("Mensaje enviado con éxito");
-        }
     }
 }
-

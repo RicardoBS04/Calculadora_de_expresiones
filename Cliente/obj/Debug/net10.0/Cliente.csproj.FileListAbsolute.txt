@@ -1,0 +1,12 @@
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.AssemblyInfoInputs.cache
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.AssemblyInfo.cs
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.sourcelink.json
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\bin\Debug\net10.0\Cliente.deps.json
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\bin\Debug\net10.0\Cliente.dll
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\bin\Debug\net10.0\Cliente.pdb
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.dll
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\refint\Cliente.dll
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\Cliente.pdb
+C:\Users\ricar\Desktop\Calculadora_de_expresiones\Cliente\obj\Debug\net10.0\ref\Cliente.dll
