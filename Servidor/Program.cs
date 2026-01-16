@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using clientew;
 
 class Program
 {
@@ -34,8 +35,11 @@ class Program
 
         string mensaje = Encoding.UTF8.GetString(buffer, 0, bytesLeidos);
         Console.WriteLine($"Mensaje recibido: {mensaje}");
-
-        string respuesta = "Servidor recibió: " + mensaje;
+/////////////////////////////////////////////////////////////////////////////////
+///     //Estas lineas representan cuando se manda el mensaje que debe de procesar el metodo de OTA
+        //Convertor expresion = new Convertor();
+        //string respuesta = expresion.Postfijo(mensaje);
+        string respuesta = "2";
 
         byte[] datosRespuesta = Encoding.UTF8.GetBytes(respuesta);
         stream.Write(datosRespuesta, 0, datosRespuesta.Length);

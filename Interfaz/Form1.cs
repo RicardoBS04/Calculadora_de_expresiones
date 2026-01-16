@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using clienteTCP;
+using System.Net;
+using System.Net.Sockets;
+using clientew;
 
 namespace Interfaz
 {
@@ -137,9 +139,19 @@ namespace Interfaz
         {
             string expresion = txtExpresion.Text;
 
-            
-            
+            int puerto = 5000;
+            string ip = "127.0.0.1";
 
+            ClienteTCP cliente = new ClienteTCP();
+
+            cliente.Conectar(ip,puerto);
+            cliente.Enviar(expresion);
+
+            txtExpresion.Text = "";
+            txtExpresion.Text = cliente.Recibir();
+    
+            
+        
         }
     }
 }
