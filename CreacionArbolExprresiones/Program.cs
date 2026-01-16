@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.Win32;
 
 namespace CreacionArbolExprresiones
 {
 
-    //CODIGO PARA PROBAR LOS ARBOLES
+    //CODIGO PARA PROBAR LOS ARBOLES y REGISTRO QUITAR PARA PEGAR TODO
     class Program
     {
         static void Main(string[] args)
@@ -28,8 +29,14 @@ namespace CreacionArbolExprresiones
 
                 double resultado = arbol.EvaluarArbol(arbol.raiz);
 
+                Registro registro = new Registro("RegistroOperaciones.csv");
+                registro.registrarOperacion(postfija, resultado);
+
                 Console.WriteLine("\nResultado final:");
                 Console.WriteLine(resultado);
+                Console.WriteLine(registro.getRegistro());
+                
+
             }
             catch (Exception ex)
             {

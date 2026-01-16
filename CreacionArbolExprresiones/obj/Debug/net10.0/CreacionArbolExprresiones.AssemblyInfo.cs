@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CreacionArbolExprresiones")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb4d05233d5f35f23a87f44c66404670bf4db4f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f55b5845725e279bdc1bd463d40a1cceddef8318")]
 [assembly: System.Reflection.AssemblyProductAttribute("CreacionArbolExprresiones")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CreacionArbolExprresiones")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
