@@ -135,6 +135,25 @@ namespace Interfaz
             txtExpresion.Text += "xor";
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            txtExpresion.Text = "";
+        }
+        private void btnHistorial_Click(object sender, EventArgs e)
+        {
+            int puerto = 5000;
+            string ip = "127.0.0.1";
+
+            ClienteTCP cliente = new ClienteTCP();
+            cliente.Conectar(ip, puerto);
+
+            cliente.Enviar("HISTORIAL");
+
+            string csv = cliente.Recibir();
+
+            FrmHistorial historial = new FrmHistorial(csv);
+            historial.ShowDialog();
+        }
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             string expresion = txtExpresion.Text;
@@ -149,8 +168,8 @@ namespace Interfaz
 
             txtExpresion.Text = "";
             txtExpresion.Text = cliente.Recibir();
-    
             
+              
         
         }
     }

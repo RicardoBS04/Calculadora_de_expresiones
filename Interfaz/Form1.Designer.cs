@@ -1,4 +1,6 @@
-﻿namespace Interfaz
+﻿using System.Runtime.CompilerServices;
+
+namespace Interfaz
 {
     partial class frmCalc
     {
@@ -52,6 +54,8 @@
             this.btnOcho = new System.Windows.Forms.Button();
             this.btnNueve = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPor
@@ -456,6 +460,32 @@
             this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // btnHistorial
+            // 
+            this.btnHistorial.BackColor = System.Drawing.Color.White;
+            this.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorial.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold);
+            this.btnHistorial.Location = new System.Drawing.Point(360, 10);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Size = new System.Drawing.Size(86, 30);
+            this.btnHistorial.TabIndex = 24;
+            this.btnHistorial.Text = "History";
+            this.btnHistorial.UseVisualStyleBackColor = false;
+            this.btnHistorial.Click += new System.EventHandler(this.btnHistorial_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Location = new System.Drawing.Point(300, 10);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(86, 30);
+            this.btnDelete.TabIndex = 25;
+            this.btnDelete.Text = "Del";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // frmCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -485,7 +515,9 @@
             this.Controls.Add(this.btnParIzq);
             this.Controls.Add(this.btnParDer);
             this.Controls.Add(this.txtExpresion);
+            this.Controls.Add(this.btnHistorial);
             this.Controls.Add(this.btnPor);
+            this.Controls.Add(this.btnDelete);
             this.Name = "frmCalc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculador de Expresiones";
@@ -520,6 +552,9 @@
         private System.Windows.Forms.Button btnOcho;
         private System.Windows.Forms.Button btnNueve;
         private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnHistorial;
+        private System.Windows.Forms.Button btnDelete;
+
     }
 }
 

@@ -38,14 +38,42 @@ class Program
         string mensaje = Encoding.UTF8.GetString(buffer, 0, bytesLeidos);
         Console.WriteLine($"Mensaje recibido: {mensaje}");
 
+        IPEndPoint ep = (IPEndPoint)cliente.Client.RemoteEndPoint;
+        string ipCliente = ep.Address.ToString();
+
+        string ruta = Path.Combine(
+            AppDomain.CurrentDomain.BaseDirectory,
+            $"historial_{ipCliente}.csv"
+        );
+
+        Registro registro = new Registro(ruta);
+
+        if (mensaje == "HISTORIAL")
+        {
+            string csv = registro.getRegistro();
+
+            byte[] datos = Encoding.UTF8.GetBytes(csv);
+            stream.Write(datos, 0, datos.Length);
+
+            stream.Close();
+            cliente.Close();
+
+            Console.WriteLine("Historial enviado");
+            return; 
+        }
+
+
         Convertor expresion = new Convertor();
         List<string> conversion_mensaje = expresion.Postfijo(mensaje);
         
         ArbolDeExpresiones arbol = new ArbolDeExpresiones();
         arbol.construirArbol(conversion_mensaje);
+
     
         double respuesta = arbol.EvaluarArbol(arbol.raiz);
         string respuestaString = respuesta.ToString();
+
+        registro.registrarOperacion(conversion_mensaje, respuesta);
 
         byte[] datosRespuesta = Encoding.UTF8.GetBytes(respuestaString);
         stream.Write(datosRespuesta, 0, datosRespuesta.Length);
